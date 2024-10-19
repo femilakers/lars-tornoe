@@ -4,23 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Lars Tornoe</title>
+    <title>Lars Torn0e</title>
 </head>
 <body>
     <header>
         <!-- LOGO -->
-        <nav class="flex justify-between items-center px-10 py-10 font-[Poppins]">
-            <div class="flex text-sm">
-                <img class="w-[200px] h-auto" src="image/LARS_LOGO.png" alt="logo">
+        <nav class="flex justify-between items-center  font-[Poppins] bg-white shadow-md">
+            
+            <div class="flex ">
+                <span class="flex justify-center md:justify-start text-sm">
+                    <img class="w-full md:w-[200px] h-auto" src="image/LARS_LOGO.png" alt="logo">
+                </span>
+
+                <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+                    <ion-icon name="menu" onclick="menu(this)"></ion-icon>
+                </span>
             </div>
+
+
+
+
+
+           
 
             <!-- Right ul -->
           <div class="flex-grow">
-            <ul class="flex justify-end items-center gap-20 m-0 text-lg">
+            <ul class="md:flex justify-end md:items-center gap-20 m-0 text-lg z-[-1] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0">
                 <li>
-                    <a class="hover:text-green-400" href="/Work.html">Work</a>
+                    <a class="hover:text-green-400 " href="/Work.html">Work</a>
                 </li>
                 <li>
                     <a class="hover:text-green-400" href="/About.html">About</a>
@@ -29,224 +43,249 @@
           </div>
 
         </nav>
+
+        <script>
+            function menu(e) {
+                let list = document.querySelector("ul");
+               e.name === 'menu' ? (e.name = "close",list.classList.add('top-[80px]') , list.classList.add('opacity-100')) :( e.name = "menu" ,list.classList.remove('top-[80px]'),list.classList.remove('opacity-100'))
+            }
+        </script>
     </header>
 
 
     <main>
         <!-- content -->
         <section class=" w-full ">
-            <div class=" flex grid items sm:grid-cols-2 space-x-4 m-2 p-2 items-center grid-cols-1 object-fit ">
+            <div class=" flex grid items sm:grid-cols-2 space-x-10 space-y-10  m-2 p-2 items-center grid-cols-1 object-fit ">
 
-                <article class="m-2 p-2">
+                <article class="m-2 p-0 relative">
                  <div class="" >
                     <a  href="/less.html">
-                        
-                        <div>
-                            <img class="w-auto h-[240px]" src="image/image 1.jpg" alt="less">
+                        <img class="w-full h-[350px] items-baseline object-fill" src="image/image 1.jpg" alt="Less">
+                        <div class="absolute top-0 w-full h-full opacity-0 hover:opacity-80 transition duration-300 ease-in-out bg-amber-200 text-black p-4 flex flex-col justify-end">
+                          <h2 class="text-lg font-bold">Less</h2>
                         </div>
-                
                     </a>
                  </div>
                 </article>
 
                
-                <article class="m-2 p-2">
+                <article class="m-2 p-0 relative">
                     <div>
                         <a>
-                            <div>
-                                <img class="w-auto h-[240px]" src="image/image 2.jpg" alt="kisu">
-                            </div>
+                           <img class="w-full h-[350px] my-4" src="image/image 2.jpg" alt="kisu">
+                           <div class="absolute top-0 w-full h-full opacity-0 hover:opacity-80 transition duration-300 ease-in-out bg-amber-200 text-black p-4 flex flex-col justify-end">
+                             <h2 class="text-lg font-bold">kisu</h2>
+                           </div>
                         </a>
                     </div>
                 </article>
                 
 
-                <article  class="m-4 p-0 relative">
+                <article  class="m-2 p-0 relative">
                     <div>
                         <a>
-                            <img class="w-auto h-[240px]" src="image/image 3.jpg" alt="Hex">
-                            <div class="absolute top-0 w-full h-full opacity-0 hover:opacity-80 transition duration-300 ease-in-out bg-amber-200 text-white p-4">
-                                <h2 class="text-lg font-bold">Image 3 Title</h2>
+                            <img class="w-full h-[350px]" src="image/image 3.jpg" alt="Hex">
+                            <div class="absolute top-0 w-full h-full opacity-0 hover:opacity-80 transition duration-300 ease-in-out bg-amber-200 text-black p-4 flex flex-col justify-end">
+                                <h2 class="text-lg font-bold">Hex</h2>
                             </div>
                         </a>
                     </div>
                 </article>
 
-                <article  class="m-2 p-2">
+                <article  class="m-2 p-0 relative">
                     <div>
                         <a>
-                            <div>
-                                <img class="w-auto h-[240px]" src="image/image 4.jpg" alt="Tind">
+                          <img class="w-full h-[350px] object-fill" src="image/image 4.jpg" alt="Tind">
+                          <div class="absolute top-0 w-full h-full opacity-0 hover:opacity-80 transition duration-300 ease-in-out bg-amber-200 text-black p-4 flex flex-col justify-end">
+                             <h2 class="text-lg font-bold">Tind</h2>
+                          </div>
+                        </a>
+                    </div>
+                </article>
+
+                <article  class="m-2 p-0 relative">
+                    <div>
+                        <a>
+                            <img class="w-full h-[350px] object-fill" src="image/image 5.jpg" alt="Coil">
+                            <div class="absolute top-0 w-full h-full opacity-0 hover:opacity-80 transition duration-300 ease-in-out bg-amber-200 text-black p-4 flex flex-col justify-end">
+                                <h2 class="text-lg font-bold">Coil</h2>
                             </div>
                         </a>
                     </div>
                 </article>
 
-                <article  class="m-2 p-2">
-                    <div>
-                        <a>
-                            <div>
-                                <img class="w-auto h-[240px]" src="image/image 5.jpg" alt="Coil">
-                            </div>
-                        </a>
-                    </div>
-                </article>
-
-                <article  class="m-2 p-2">
+                <article  class="m-2 p-0 relative">
                   <div>
                     <a>
-                        <div>
-                            <img class="w-auto h-[240px]" src="image/image 6.jpg" alt="The Dots">
+                        <img class="w-full h-[350px] object-fill" src="image/image 6.jpg" alt="The Dots">
+                        <div class="absolute top-0 w-full h-full opacity-0 hover:opacity-80 transition duration-300 ease-in-out bg-amber-200 text-black p-4 flex flex-col justify-end">
+                            <h2 class="text-lg font-bold">The Dots</h2>
                         </div>
                     </a>
                   </div>
                 </article>
 
-                <article  class="m-2 p-2">
+                <article  class="m-2 p-0 relative">
                   <div>
                     <a>
-                        <div>
-                            <img class="w-auto h-[240px]" src="image/image 7.jpg" alt="Pinch">
+                        <img class="w-full h-[350px] object-fill" src="image/image 7.jpg" alt="Pinch">
+                        <div class="absolute top-0 w-full h-full opacity-0 hover:opacity-80 transition duration-300 ease-in-out bg-amber-200 text-black p-4 flex flex-col justify-end">
+                            <h2 class="text-lg font-bold">Pinch</h2>
                         </div>
                     </a>
                   </div>
                 </article>
 
-                <article  class="m-2 p-2">
+                <article  class="m-2 p-0 relative">
                     <div>
                         <a>
-                            <div>
-                                <img class="w-auto h-[240px]" src="image/image 8.jpg" alt="Stripes">
+                            <img class="w-full h-[350px] object-fill" src="image/image 8.jpg" alt="Stripes">
+                            <div class="absolute top-0 w-full h-full opacity-0 hover:opacity-80 transition duration-300 ease-in-out bg-amber-200 text-black p-4 flex flex-col justify-end">
+                                <h2 class="text-lg font-bold">Stripes</h2>
                             </div>
                         </a>
                     </div>
                 </article>
 
-                <article  class="m-2 p-2">
+                <article  class="m-2 p-0 relative">
                     <div>
                         <a>
-                            <div>
-                                <img class="w-auto h-[240px]" src="image/scoop.jpg" alt="scoop">
+                            <img class="w-full h-[350px] object-fill" src="image/scoop.jpg" alt="Scoop">
+                            <div class="absolute top-0 left-0 w-full h-full opacity-0 hover:opacity-80 transition duration-300 ease-in-out bg-amber-200 text-black p-4 flex flex-col justify-end">
+                                <h2 class="text-lg font-bold">Scoop</h2>
                             </div>
                         </a>
                     </div>
                 </article>
 
-                <article  class="m-2 p-2">
+                <article  class="m-2 p-0 relative">
                     <div>
                         <a>
-                            <div>
-                                <img class="w-[460px] h-[240px]" src="image/fjell.jpg" alt="fjell">
+                            <img class="w-full h-[350px] object-fill" src="image/fjell.jpg" alt="Fjell">
+                            <div class="absolute top-0 left-0 w-full h-full opacity-0 hover:opacity-80 transition duration-300 ease-in-out bg-amber-200 text-black p-4 flex flex-col justify-end">
+                                <h2 class="text-lg font-bold">Fjell</h2>
                             </div>
                         </a>
                     </div>
                 </article>
 
-                <article  class="m-2 p-2">
+                <article  class="m-2 p-0 relative">
                    <div>
                     <a>
-                        <div>
-                            <img class="w-auto h-[240px]" src="image/bloc.jpg" alt="bloc">
+                        <img class="w-full h-[350px] object-fill" src="image/bloc.jpg" alt="Bloc">
+                        <div class="absolute top-0 left-0 w-full h-full opacity-0 hover:opacity-80 transition duration-300 ease-in-out bg-amber-200 text-black p-4 flex flex-col justify-end">
+                            <h2 class="text-lg font-bold">Bloc</h2>
                         </div>
                     </a>
                    </div>
                 </article>
 
-                <article class="m-2 p-2">
+                <article class="m-2 p-0 relative">
                    <div>
                     <a>
-                        <div>
-                            <img class="w-auto h-[240px]" src="image/con image.jpg" alt="con">
+                        <img class="w-full h-[350px] object-fill" src="image/con image.jpg" alt="con Image">
+                        <div class="absolute top-0 left-0 w-full h-full opacity-0 hover:opacity-80 transition duration-300 ease-in-out bg-amber-200 text-black p-4 flex flex-col justify-end">
+                            <h2 class="text-lg font-bold">Con Image</h2>
+                         </div>
+                    </a>
+                   </div>
+                </article>
+
+                <article  class="m-2 p-0 relative">
+                    <div>
+                        <a>
+                            <img class="w-full h-[350px] object-fill" src="image/Kvart.jpg" alt="Kvart">
+                            <div class="absolute top-0 left-0 w-full h-full opacity-0 hover:opacity-80 transition duration-300 ease-in-out bg-amber-200 text-black p-4 flex flex-col justify-end">
+                                <h2 class="text-lg font-bold">Kvart</h2>
+                             </div>
+                        </a>
+                    </div>
+                </article>
+
+                <article  class="m-2 p-0 relative">
+                    <div>
+                        <a>
+                            <img class="w-full h-[350px] object-fill" src="image/clover.jpg" alt="Clover">
+                            <div class="absolute top-0 left-0 w-full h-full opacity-0 hover:opacity-80 transition duration-300 ease-in-out bg-amber-200 text-black p-4 flex flex-col justify-end">
+                              <h2 class="text-lg font-bold">Clover</h2>
+                            </div>
+                        </a>
+                    </div>
+                </article>
+
+                <article  class="m-2 p-0 relative">
+                   <div>
+                    <a>
+                        <img class="w-full h-[350px] object-fill" src="image/undring.jpg" alt="Undring">
+                        <div class="absolute top-0 left-0 w-full h-full opacity-0 hover:opacity-80 transition duration-300 ease-in-out bg-amber-200 text-black p-4 flex flex-col justify-end">
+                            <h2 class="text-lg font-bold">Undring</h2>
                         </div>
                     </a>
                    </div>
                 </article>
 
-                <article  class="m-2 p-2">
+                <article  class="m-2 p-0 relative">
                     <div>
                         <a>
-                            <div>
-                                <img class="w-auto h-[240px]" src="image/Kvart.jpg" alt="Kvart">
+                            <img class="w-full h-[350px] object-fill" src="image/Copenhagen chair.jpg" alt="Copenhagen chair">
+                            <div class="absolute top-0 left-0 w-full h-full opacity-0 hover:opacity-80 transition duration-300 ease-in-out bg-amber-200 text-black p-4 flex flex-col justify-end">
+                                <h2 class="text-lg font-bold">Copenhagen chair</h2>
                             </div>
                         </a>
                     </div>
                 </article>
 
-                <article  class="m-2 p-2">
-                    <div>
-                        <a>
-                            <div>
-                                <img class="w-auto h-[240px]" src="image/clover.jpg" alt="clover">
-                            </div>
-                        </a>
-                    </div>
-                </article>
-
-                <article  class="m-2 p-2">
-                   <div>
-                    <a>
-                        <div>
-                            <img class="w-auto h-[240px]" src="image/undring.jpg" alt="Hayes">
-                        </div>
-                    </a>
-                   </div>
-                </article>
-
-                <article  class="m-2 p-2">
-                    <div>
-                        <a>
-                            <div>
-                                <img class="w-auto h-[240px]" src="image/Copenhagen chair.jpg" alt="corner2">
-                            </div>
-                        </a>
-                    </div>
-                </article>
-
-                <article  class="m-2 p-2">
+                <article  class="m-2 p-0 relative">
                    <div>
                      <a>
-                        <div>
-                            <img class="w-auto h-[240px]" src="image/corner.jpg" alt="corner">
+                        <img class="w-full h-[350px] object-fill" src="image/corner.jpg" alt="Corner">
+                        <div class="absolute top-0 left-0 w-full h-full opacity-0 hover:opacity-80 transition duration-300 ease-in-out bg-amber-200 text-black p-4 flex flex-col justify-end">
+                             <h2 class="text-lg font-bold">Corner</h2>
                         </div>
                      </a>
                    </div>
                 </article>
 
-                <article  class="m-2 p-2">
+                <article  class="m-2 p-0 relative">
                     <div>
                         <a>
-                            <div>
-                                <img class="w-auto h-[240px]" src="image/Clint.jpg" alt="Clint">
+                            <img class="w-full h-[350px] object-fill" src="image/Clint.jpg" alt="Clint">
+                            <div class="absolute top-0 left-0 w-full h-full opacity-0 hover:opacity-80 transition duration-300 ease-in-out bg-amber-200 text-black p-4 flex flex-col justify-end">
+                                <h2 class="text-lg font-bold">Clint</h2>
                             </div>
                         </a>
                     </div>
                 </article>
 
-                <article  class="m-2 p-2">
+                <article  class="m-2 p-0 relative">
                     <div>
                         <a>
-                            <div>
-                                <img class="w-auto h-[240px]" src="image/nunu.jpg" alt="Nunu">
+                            <img class="w-full h-[350px] object-fill" src="image/nunu.jpg" alt="Nunu">
+                            <div class="absolute top-0 left-0 w-full h-full opacity-0 hover:opacity-80 transition duration-300 ease-in-out bg-amber-200 text-black p-4 flex flex-col justify-end">
+                                <h2 class="text-lg font-bold">Nunu</h2>
                             </div>
                         </a>
                     </div>
                 </article>
 
-                <article  class="m-2 p-2">
+                <article  class="m-2 p-0 relative">
                    <div>
                      <a>
-                        <div>
-                            <img class="w-auto h-[240px]" src="image/Myk_Viz5.jfif" alt="Jim">
+                        <img class="w-full h-[350px] object-fill" src="image/Myk_Viz5.jfif" alt="con Image">
+                        <div class="absolute top-0 left-0 w-full h-full opacity-0 hover:opacity-80 transition duration-300 ease-in-out bg-amber-200 text-black p-4 flex flex-col justify-end">
+                            <h2 class="text-lg font-bold">Con Image</h2>
                         </div>
                     </a>
                    </div>
                 </article>
 
-                <article  class="m-2 p-2">
+                <article  class="m-2 p-0 relative">
                     <div>
                         <a>
-                            <div>
-                                <img class="w-auto h-[240px]" src="image/bone.jpg" alt="Bone">
+                            <img class="w-full h-[350px] object-fill" src="image/bone.jpg" alt="Bone">
+                            <div class="absolute top-0 left-0 w-full h-full opacity-0 hover:opacity-80 transition duration-300 ease-in-out bg-amber-200 text-black p-4 flex flex-col justify-end">
+                                <h2 class="text-lg font-bold">Bone</h2>
                             </div>
                         </a>
                     </div>
@@ -259,7 +298,7 @@
         <!---->
 
 
-        <!-- 
+        <!--
         <section class="relative object-cover overflow-hidden w-full block">
             <div class="flex flex-wrap justify-between m-2 p-2">
                 <article class="flex-1 m-2 p-0 gap-2 relative">
@@ -280,7 +319,8 @@
                 </article>
             
             </div>
-        </section> -->
+        </section>
+        -->
 
 
 
