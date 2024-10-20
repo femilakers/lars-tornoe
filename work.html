@@ -1,0 +1,44 @@
+<header>
+    <!-- LOGO -->
+    <nav class="flex justify-between items-center px-6 py-8 font-[Poppins] bg-white ">
+        
+        <div class="flex ">
+            <span class="flex justify-center md:justify-start text-sm">
+                <img class="w-full md:w-[200px] h-auto" src="image/LARS_LOGO.png" alt="logo">
+            </span>
+        </div>
+
+        <span class="text-3xl cursor-pointer mx-2 md:hidden pl-8 justify-end bg-white">
+            <ion-icon name="menu" onclick="menu(this)"></ion-icon>
+        </span>
+
+        <!-- Right ul -->
+        <div class="flex-grow ">
+            <ul class="md:flex justify-end md:items-center gap-20 m-0 text-lg z-[-1] md:z-auto md:static absolute md:bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 transition-all duration-300">
+                <li>
+                    <a class="hover:text-green-400" href="/Work.html">Work</a>
+                </li>
+                <li>
+                    <a class="hover:text-green-400" href="/About.html">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <script>
+        function menu(e) {
+            let list = document.querySelector("ul");
+            if (e.name === 'menu') {
+                e.name = "close";
+                list.classList.add('top-[80px]');
+                list.classList.add('opacity-100');
+                list.classList.remove('opacity-0');
+            } else {
+                e.name = "menu";
+                list.classList.remove('top-[80px]');
+                list.classList.remove('opacity-100');
+                list.classList.add('opacity-0');
+            }
+        }
+    </script>
+</header>
